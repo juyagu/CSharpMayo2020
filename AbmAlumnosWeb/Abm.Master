@@ -30,6 +30,12 @@
                             NavigateUrl="~/ListadoAlumnos.aspx"
                              >Listado de Alumnos</asp:HyperLink>
                     </li>
+                    <li class="nav-item">
+                         <asp:HyperLink ID="HyperLinkCursos" 
+                            CssClass="nav-link" runat="server"
+                            NavigateUrl="~/AdministracionCursos.aspx"
+                             >Administración de Cursos</asp:HyperLink>
+                    </li>
                 </ul>
             </div>
         </nav>
