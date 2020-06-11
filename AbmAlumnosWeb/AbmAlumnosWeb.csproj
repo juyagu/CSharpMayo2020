@@ -45,9 +45,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Entidades">
-      <HintPath>..\..\..\clase5\Clase5App\Entidades\bin\Debug\Entidades.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -82,6 +79,7 @@
     <Content Include="Destino.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
+    <Content Include="js\script.js" />
     <Content Include="ListadoAlumnos.aspx" />
     <Content Include="Origen.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -266,7 +264,12 @@
       <Project>{91ed4f7e-7eb5-4541-9e34-719132933ca2}</Project>
       <Name>DAO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{cbf507de-8238-4c7a-9647-d2639de1d4cd}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

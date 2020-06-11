@@ -4,3 +4,9 @@ D:\EducacionIT\Distancia\CSharp\clase5\Clase5App\Entidades\obj\Debug\Entidades.c
 D:\EducacionIT\Distancia\CSharp\clase5\Clase5App\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 D:\EducacionIT\Distancia\CSharp\clase5\Clase5App\Entidades\obj\Debug\Entidades.dll
 D:\EducacionIT\Distancia\CSharp\clase5\Clase5App\Entidades\obj\Debug\Entidades.pdb
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\bin\Debug\Entidades.dll
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\bin\Debug\Entidades.pdb
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entidades.dll
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entidades.pdb
