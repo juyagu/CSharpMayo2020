@@ -18,7 +18,7 @@ namespace DAO
                 conn = new SqlConnection(connectionString);
                 //conn.ConnectionString = connectionString;
                 string query = "select usuarios.nombre, usuarios.apellido, instructores.id_instructor from instructores " +
-                    "join usuarios11 on " +
+                    "join usuarios on " +
                     "instructores.id_usuario = usuarios.id_usuario";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 conn.Open();
