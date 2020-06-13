@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AulaDAO.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="InstructorDAO.cs" />
     <Compile Include="MateriaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

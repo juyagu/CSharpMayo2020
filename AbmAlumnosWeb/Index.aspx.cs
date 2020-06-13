@@ -19,7 +19,7 @@ namespace AbmAlumnosWeb
             materias.Add(m2);
 
 
-            Instructor i1 = new Instructor("Roberto","Perez",materias);
+            //Instructor i1 = new Instructor("Roberto","Perez",materias);
         }
     }
 }

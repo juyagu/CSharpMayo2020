@@ -40,5 +40,6 @@
 
         </tbody>
     </table>
+    <asp:Label ID="label_error" ForeColor="Red" runat="server" />
     <script type="text/javascript" src="js/script.js"></script>
 </asp:Content>

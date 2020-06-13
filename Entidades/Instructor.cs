@@ -8,13 +8,11 @@ namespace Entidades
 {
     public class Instructor : Persona
     {
-        public List<Materia> Materias { get; set; }
-
-        public Instructor() { }
-
-        public Instructor(string nombre, string apellido, List<Materia> mat): base(nombre, apellido)
+        public int Id_Instructor { get; }
+        
+        public Instructor(int id,string nombre, string apellido): base(nombre, apellido)
         {
-            Materias = mat;
+            Id_Instructor = id;            
         }
     }
 }

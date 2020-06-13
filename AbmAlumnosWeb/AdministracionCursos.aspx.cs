@@ -16,6 +16,8 @@ namespace AbmAlumnosWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             obtenerMaterias();
+            obtenerAulas();
+            obtenerInstructores();
         }
 
         protected void obtenerMaterias()
@@ -25,6 +27,32 @@ namespace AbmAlumnosWeb
             DropMaterias.DataTextField = "Nombre";
             DropMaterias.DataValueField = "Id_Materia";
             DropMaterias.DataBind();
+        }
+
+        protected void obtenerAulas()
+        {
+            List<Aula> aulas = AulaDAO.ObtenerAulas(connectionString);
+            DropAula.DataSource = aulas;
+            DropAula.DataTextField = "Nombre_Aula";
+            DropAula.DataValueField = "Codigo_Aula";
+            DropAula.DataBind();
+        }
+
+        protected void obtenerInstructores()
+        {
+            try
+            {
+                InstructorDAO instructorDAO = new InstructorDAO();
+                DropInstructor.DataSource = instructorDAO.ObtenerInstructores(connectionString);
+                DropInstructor.DataTextField = "Apellido";
+                DropInstructor.DataValueField = "Id_Instructor";
+                DropInstructor.DataBind();
+            }
+            catch(Exception e)
+            {
+                //label_error.Text = e.Message;
+                label_error.Text = "Estamos ocupados, vuelva mas tarde";
+            }
         }
     }
 }
