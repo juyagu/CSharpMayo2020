@@ -1,4 +1,4 @@
-reate view view_cursos as
+create view view_cursos as
   SELECT        dbo.cursos.id_curso, dbo.instructores.id_instructor, dbo.usuarios.id_usuario, 
   dbo.usuarios.nombre, dbo.usuarios.apellido, dbo.materias.id_materia, dbo.materias.nombre AS materia,
   dbo.materias.programa, aulas.codigo_aula, aulas.capacidad
