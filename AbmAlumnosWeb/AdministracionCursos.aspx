@@ -37,7 +37,13 @@
             </tr>
         </thead>
         <tbody id="body_cursos">
-
+            <tr>
+                <td>1</td>
+                <td>php</td>
+                <td>Programa de php</td>
+                <td>3</td>
+                <td>Ulrich</td>
+            </tr>
         </tbody>
     </table>
     <asp:Label ID="label_error" ForeColor="Red" runat="server" />

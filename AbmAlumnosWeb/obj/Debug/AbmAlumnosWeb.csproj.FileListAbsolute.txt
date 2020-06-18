@@ -122,3 +122,4 @@ D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\obj\Debug\Ab
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\obj\Debug\AbmAlumnosWeb.csproj.CopyComplete
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\obj\Debug\AbmAlumnosWeb.dll
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\obj\Debug\AbmAlumnosWeb.pdb
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\bin\DAO.dll.config

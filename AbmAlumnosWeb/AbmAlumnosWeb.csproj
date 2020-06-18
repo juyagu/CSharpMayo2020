@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdministracionCursos.aspx" />
+    <Content Include="CapturaErrores.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -81,6 +82,7 @@
     <Content Include="Index.aspx" />
     <Content Include="js\script.js" />
     <Content Include="ListadoAlumnos.aspx" />
+    <Content Include="MostrarError.aspx" />
     <Content Include="Origen.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -208,6 +210,13 @@
     <Compile Include="AdministracionCursos.aspx.designer.cs">
       <DependentUpon>AdministracionCursos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CapturaErrores.aspx.cs">
+      <DependentUpon>CapturaErrores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapturaErrores.aspx.designer.cs">
+      <DependentUpon>CapturaErrores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Destino.aspx.cs">
       <DependentUpon>Destino.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +240,13 @@
     </Compile>
     <Compile Include="ListadoAlumnos.aspx.designer.cs">
       <DependentUpon>ListadoAlumnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarError.aspx.cs">
+      <DependentUpon>MostrarError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostrarError.aspx.designer.cs">
+      <DependentUpon>MostrarError.aspx</DependentUpon>
     </Compile>
     <Compile Include="Origen.aspx.cs">
       <DependentUpon>Origen.aspx</DependentUpon>

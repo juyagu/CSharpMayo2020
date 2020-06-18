@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using Entidades;
 using DAO;
+using System.Web.Services;
+using System.Web.Script.Services;
 
 namespace AbmAlumnosWeb
 {
@@ -53,6 +55,15 @@ namespace AbmAlumnosWeb
                 //label_error.Text = e.Message;
                 label_error.Text = "Estamos ocupados, vuelva mas tarde";
             }
+        }
+
+
+        [WebMethod, ScriptMethod(ResponseFormat = ResponseFormat.Json,UseHttpGet =true)]
+        public static List<Curso> TablaCursos()
+        {
+            CursoDAO cursoDAO = new CursoDAO();
+            List<Curso> cursos = cursoDAO.ObtenerCursos();
+            return cursos;
         }
     }
 }

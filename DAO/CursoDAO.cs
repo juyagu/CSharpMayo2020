@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Sql;
-using Entidades
+using Entidades;
 using System.Data.SqlClient;
 
 namespace DAO

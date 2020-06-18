@@ -32,7 +32,8 @@ namespace AbmAlumnosWeb
 
         protected void Application_Error(object sender, EventArgs e)
         {
-
+            Exception ex = Server.GetLastError();
+            Server.Transfer("~/MostrarError.aspx?Ex=" + ex.Message);
         }
 
         protected void Session_End(object sender, EventArgs e)
