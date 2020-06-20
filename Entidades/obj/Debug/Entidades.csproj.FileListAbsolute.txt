@@ -10,3 +10,9 @@ D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entida
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entidades.dll
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entidades.pdb
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\bin\Debug\Entidades.dll.config
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\bin\Debug\EntityFramework.dll
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\bin\Debug\EntityFramework.xml
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\Entidades\obj\Debug\Entidades.csproj.CopyComplete

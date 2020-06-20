@@ -8,3 +8,8 @@ D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\obj\Debug\DAO.csproj.C
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\obj\Debug\DAO.dll
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\obj\Debug\DAO.pdb
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\bin\Debug\DAO.dll.config
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\bin\Debug\EntityFramework.dll
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\bin\Debug\EntityFramework.SqlServer.dll
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\bin\Debug\Entidades.dll.config
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\bin\Debug\EntityFramework.xml
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\DAO\bin\Debug\EntityFramework.SqlServer.xml

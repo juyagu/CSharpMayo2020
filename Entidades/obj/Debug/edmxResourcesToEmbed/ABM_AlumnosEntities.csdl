@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ABMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="alumnos">
+    <Key>
+      <PropertyRef Name="id_alumno" />
+    </Key>
+    <Property Name="id_alumno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_usuario" Type="Int32" />
+    <Property Name="regular" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="usuarios" Relationship="Self.FK__alumnos__id_usua__398D8EEE" FromRole="alumnos" ToRole="usuarios" />
+    <NavigationProperty Name="cursos" Relationship="Self.alumnosxcurso" FromRole="alumnos" ToRole="cursos" />
+    <Property Name="id_materia" Type="Int32" />
+  </EntityType>
+  <EntityType Name="aulas">
+    <Key>
+      <PropertyRef Name="codigo_aula" />
+    </Key>
+    <Property Name="codigo_aula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="capacidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="clases" Relationship="Self.FK__clases__codigo_a__440B1D61" FromRole="aulas" ToRole="clases" />
+  </EntityType>
+  <EntityType Name="clases">
+    <Key>
+      <PropertyRef Name="id_clase" />
+    </Key>
+    <Property Name="id_clase" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="inicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="codigo_aula" Type="Int32" />
+    <NavigationProperty Name="aulas" Relationship="Self.FK__clases__codigo_a__440B1D61" FromRole="clases" ToRole="aulas" />
+    <NavigationProperty Name="cursos" Relationship="Self.clasesxcurso" FromRole="clases" ToRole="cursos" />
+  </EntityType>
+  <EntityType Name="cursos">
+    <Key>
+      <PropertyRef Name="id_curso" />
+    </Key>
+    <Property Name="id_curso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_materia" Type="Int32" />
+    <Property Name="codigo_aula" Type="Int32" />
+    <Property Name="id_instructor" Type="Int32" />
+    <Property Name="habilitado" Type="Int32" />
+    <NavigationProperty Name="materias" Relationship="Self.FK__cursos__id_mater__46E78A0C" FromRole="cursos" ToRole="materias" />
+    <NavigationProperty Name="alumnos" Relationship="Self.alumnosxcurso" FromRole="cursos" ToRole="alumnos" />
+    <NavigationProperty Name="clases" Relationship="Self.clasesxcurso" FromRole="cursos" ToRole="clases" />
+  </EntityType>
+  <EntityType Name="instructores">
+    <Key>
+      <PropertyRef Name="id_instructor" />
+    </Key>
+    <Property Name="id_instructor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_usuario" Type="Int32" />
+    <NavigationProperty Name="usuarios" Relationship="Self.FK__instructo__id_us__3D5E1FD2" FromRole="instructores" ToRole="usuarios" />
+    <NavigationProperty Name="materias" Relationship="Self.materiasxinstructor" FromRole="instructores" ToRole="materias" />
+  </EntityType>
+  <EntityType Name="materias">
+    <Key>
+      <PropertyRef Name="id_materia" />
+    </Key>
+    <Property Name="id_materia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="programa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="cursos" Relationship="Self.FK__cursos__id_mater__46E78A0C" FromRole="materias" ToRole="cursos" />
+    <NavigationProperty Name="instructores" Relationship="Self.materiasxinstructor" FromRole="materias" ToRole="instructores" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="alumnos" Relationship="Self.FK__alumnos__id_usua__398D8EEE" FromRole="usuarios" ToRole="alumnos" />
+    <NavigationProperty Name="instructores" Relationship="Self.FK__instructo__id_us__3D5E1FD2" FromRole="usuarios" ToRole="instructores" />
+  </EntityType>
+  <EntityType Name="view_cursos">
+    <Key>
+      <PropertyRef Name="id_curso" />
+      <PropertyRef Name="id_instructor" />
+      <PropertyRef Name="id_usuario" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="apellido" />
+      <PropertyRef Name="id_materia" />
+      <PropertyRef Name="materia" />
+      <PropertyRef Name="programa" />
+      <PropertyRef Name="codigo_aula" />
+      <PropertyRef Name="capacidad" />
+    </Key>
+    <Property Name="id_curso" Type="Int32" Nullable="false" />
+    <Property Name="id_instructor" Type="Int32" Nullable="false" />
+    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_materia" Type="Int32" Nullable="false" />
+    <Property Name="materia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="programa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codigo_aula" Type="Int32" Nullable="false" />
+    <Property Name="capacidad" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__alumnos__id_usua__398D8EEE">
+    <End Role="usuarios" Type="Self.usuarios" Multiplicity="0..1" />
+    <End Role="alumnos" Type="Self.alumnos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="alumnos">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__clases__codigo_a__440B1D61">
+    <End Role="aulas" Type="Self.aulas" Multiplicity="0..1" />
+    <End Role="clases" Type="Self.clases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aulas">
+        <PropertyRef Name="codigo_aula" />
+      </Principal>
+      <Dependent Role="clases">
+        <PropertyRef Name="codigo_aula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cursos__id_mater__46E78A0C">
+    <End Role="materias" Type="Self.materias" Multiplicity="0..1" />
+    <End Role="cursos" Type="Self.cursos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="materias">
+        <PropertyRef Name="id_materia" />
+      </Principal>
+      <Dependent Role="cursos">
+        <PropertyRef Name="id_materia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__instructo__id_us__3D5E1FD2">
+    <End Role="usuarios" Type="Self.usuarios" Multiplicity="0..1" />
+    <End Role="instructores" Type="Self.instructores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="instructores">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="alumnosxcurso">
+    <End Role="alumnos" Type="Self.alumnos" Multiplicity="*" />
+    <End Role="cursos" Type="Self.cursos" Multiplicity="*" />
+  </Association>
+  <Association Name="clasesxcurso">
+    <End Role="clases" Type="Self.clases" Multiplicity="*" />
+    <End Role="cursos" Type="Self.cursos" Multiplicity="*" />
+  </Association>
+  <Association Name="materiasxinstructor">
+    <End Role="instructores" Type="Self.instructores" Multiplicity="*" />
+    <End Role="materias" Type="Self.materias" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ABMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="alumnos" EntityType="Self.alumnos" />
+    <EntitySet Name="aulas" EntityType="Self.aulas" />
+    <EntitySet Name="clases" EntityType="Self.clases" />
+    <EntitySet Name="cursos" EntityType="Self.cursos" />
+    <EntitySet Name="instructores" EntityType="Self.instructores" />
+    <EntitySet Name="materias" EntityType="Self.materias" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+    <EntitySet Name="view_cursos" EntityType="Self.view_cursos" />
+    <AssociationSet Name="FK__alumnos__id_usua__398D8EEE" Association="Self.FK__alumnos__id_usua__398D8EEE">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="alumnos" EntitySet="alumnos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__clases__codigo_a__440B1D61" Association="Self.FK__clases__codigo_a__440B1D61">
+      <End Role="aulas" EntitySet="aulas" />
+      <End Role="clases" EntitySet="clases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cursos__id_mater__46E78A0C" Association="Self.FK__cursos__id_mater__46E78A0C">
+      <End Role="materias" EntitySet="materias" />
+      <End Role="cursos" EntitySet="cursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__instructo__id_us__3D5E1FD2" Association="Self.FK__instructo__id_us__3D5E1FD2">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="instructores" EntitySet="instructores" />
+    </AssociationSet>
+    <AssociationSet Name="alumnosxcurso" Association="Self.alumnosxcurso">
+      <End Role="alumnos" EntitySet="alumnos" />
+      <End Role="cursos" EntitySet="cursos" />
+    </AssociationSet>
+    <AssociationSet Name="clasesxcurso" Association="Self.clasesxcurso">
+      <End Role="clases" EntitySet="clases" />
+      <End Role="cursos" EntitySet="cursos" />
+    </AssociationSet>
+    <AssociationSet Name="materiasxinstructor" Association="Self.materiasxinstructor">
+      <End Role="instructores" EntitySet="instructores" />
+      <End Role="materias" EntitySet="materias" />
+    </AssociationSet>
+    <FunctionImport Name="INS_NUEVO_ALUMNO">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apellido" Mode="In" Type="String" />
+      <Parameter Name="New_MEM_BASIC_ID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="testLoco" EntityType="ABMModel.testLoco" />
+    <EntitySet Name="VIEW_ALUMNOS" EntityType="ABMModel.VIEW_ALUMNOS" />
+  </EntityContainer>
+  <EntityType Name="testLoco">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="texto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VIEW_ALUMNOS">
+    <Key>
+      <PropertyRef Name="id_alumno" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="apellido" />
+      <PropertyRef Name="materia" />
+    </Key>
+    <Property Name="id_alumno" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="materia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

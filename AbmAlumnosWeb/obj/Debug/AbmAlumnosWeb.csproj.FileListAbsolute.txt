@@ -123,3 +123,8 @@ D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\obj\Debug\Ab
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\obj\Debug\AbmAlumnosWeb.dll
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\obj\Debug\AbmAlumnosWeb.pdb
 D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\bin\DAO.dll.config
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\bin\EntityFramework.dll
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\bin\EntityFramework.SqlServer.dll
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\bin\Entidades.dll.config
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\bin\EntityFramework.xml
+D:\EducacionIT\Distancia\CSharp\clase9\CSharpMayo2020\AbmAlumnosWeb\bin\EntityFramework.SqlServer.xml

@@ -13,5 +13,23 @@ namespace AbmAlumnosWeb
 
     public partial class ListadoAlumnos
     {
+
+        /// <summary>
+        /// Control grid_alumnos_vista.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grid_alumnos_vista;
+
+        /// <summary>
+        /// Control grid_alumnos_consulta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grid_alumnos_consulta;
     }
 }

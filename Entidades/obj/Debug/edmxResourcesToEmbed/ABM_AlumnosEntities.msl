@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ABMModelStoreContainer" CdmEntityContainer="ABMEntities">
+    <EntitySetMapping Name="alumnos">
+      <EntityTypeMapping TypeName="ABMModel.alumnos">
+        <MappingFragment StoreEntitySet="alumnos">
+          <ScalarProperty Name="id_materia" ColumnName="id_materia" />
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="regular" ColumnName="regular" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aulas">
+      <EntityTypeMapping TypeName="ABMModel.aulas">
+        <MappingFragment StoreEntitySet="aulas">
+          <ScalarProperty Name="codigo_aula" ColumnName="codigo_aula" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clases">
+      <EntityTypeMapping TypeName="ABMModel.clases">
+        <MappingFragment StoreEntitySet="clases">
+          <ScalarProperty Name="id_clase" ColumnName="id_clase" />
+          <ScalarProperty Name="inicio" ColumnName="inicio" />
+          <ScalarProperty Name="fin" ColumnName="fin" />
+          <ScalarProperty Name="codigo_aula" ColumnName="codigo_aula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cursos">
+      <EntityTypeMapping TypeName="ABMModel.cursos">
+        <MappingFragment StoreEntitySet="cursos">
+          <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+          <ScalarProperty Name="id_materia" ColumnName="id_materia" />
+          <ScalarProperty Name="codigo_aula" ColumnName="codigo_aula" />
+          <ScalarProperty Name="id_instructor" ColumnName="id_instructor" />
+          <ScalarProperty Name="habilitado" ColumnName="habilitado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instructores">
+      <EntityTypeMapping TypeName="ABMModel.instructores">
+        <MappingFragment StoreEntitySet="instructores">
+          <ScalarProperty Name="id_instructor" ColumnName="id_instructor" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="materias">
+      <EntityTypeMapping TypeName="ABMModel.materias">
+        <MappingFragment StoreEntitySet="materias">
+          <ScalarProperty Name="id_materia" ColumnName="id_materia" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="programa" ColumnName="programa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="ABMModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_cursos">
+      <EntityTypeMapping TypeName="ABMModel.view_cursos">
+        <MappingFragment StoreEntitySet="view_cursos">
+          <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+          <ScalarProperty Name="id_instructor" ColumnName="id_instructor" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="id_materia" ColumnName="id_materia" />
+          <ScalarProperty Name="materia" ColumnName="materia" />
+          <ScalarProperty Name="programa" ColumnName="programa" />
+          <ScalarProperty Name="codigo_aula" ColumnName="codigo_aula" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="alumnosxcurso" TypeName="ABMModel.alumnosxcurso" StoreEntitySet="alumnosxcurso">
+      <EndProperty Name="alumnos">
+        <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+      </EndProperty>
+      <EndProperty Name="cursos">
+        <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="clasesxcurso" TypeName="ABMModel.clasesxcurso" StoreEntitySet="clasesxcurso">
+      <EndProperty Name="clases">
+        <ScalarProperty Name="id_clase" ColumnName="id_clase" />
+      </EndProperty>
+      <EndProperty Name="cursos">
+        <ScalarProperty Name="id_curso" ColumnName="id_curso" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="materiasxinstructor" TypeName="ABMModel.materiasxinstructor" StoreEntitySet="materiasxinstructor">
+      <EndProperty Name="instructores">
+        <ScalarProperty Name="id_instructor" ColumnName="id_instructor" />
+      </EndProperty>
+      <EndProperty Name="materias">
+        <ScalarProperty Name="id_materia" ColumnName="id_materia" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="INS_NUEVO_ALUMNO" FunctionName="ABMModel.Store.INS_NUEVO_ALUMNO" />
+    <EntitySetMapping Name="testLoco">
+      <EntityTypeMapping TypeName="ABMModel.testLoco">
+        <MappingFragment StoreEntitySet="testLoco">
+          <ScalarProperty Name="texto" ColumnName="texto" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEW_ALUMNOS">
+      <EntityTypeMapping TypeName="ABMModel.VIEW_ALUMNOS">
+        <MappingFragment StoreEntitySet="VIEW_ALUMNOS">
+          <ScalarProperty Name="materia" ColumnName="materia" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,4 +1,11 @@
-﻿// JSON: JavaScript Object Notation
+﻿function btn_loco() {
+    alert("Presionaste el boton HTML")
+}
+function combo() {
+    alert("cambios en el select")
+}
+
+// JSON: JavaScript Object Notation
 /*
  * {
  *  nombre: "Jose",
