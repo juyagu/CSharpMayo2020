@@ -20,7 +20,7 @@
                 CssClass="form-control" runat="server" />
         </div>
         <div class="col-auto">
-            <button class="btn btn-primary" id="btn_enviar" type="button">
+            <button class="btn btn-primary mt-4" id="btn_enviar" type="button" onclick="guardarCurso()">
                 Enviar
             </button>
         </div>
@@ -34,6 +34,8 @@
                 <th>Programa</th>
                 <th>Aula</th>
                 <th>Instructor</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody id="body_cursos">

@@ -11,7 +11,7 @@ namespace Entidades
         public int Id_Curso { get; }
         public Instructor Instructor { get; set; } 
 
-        Materia Materia { get; set; }
+        public Materia Materia { get; set; }
 
         public Aula Aula { get; set; }
 

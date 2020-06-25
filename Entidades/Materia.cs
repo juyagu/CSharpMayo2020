@@ -12,7 +12,6 @@ namespace Entidades
         public string Nombre { get; set; }
         public string Programa { get; set; }
 
-        public Materia() { }
         public Materia(int id, string n, string p)
         {
             Id_Materia = id;
@@ -29,5 +28,6 @@ namespace Entidades
             Nombre = n;
             Programa = p;
         }
+        public Materia() { }
     }
 }

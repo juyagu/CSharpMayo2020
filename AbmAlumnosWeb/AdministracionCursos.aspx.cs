@@ -65,5 +65,45 @@ namespace AbmAlumnosWeb
             List<Curso> cursos = cursoDAO.ObtenerCursos();
             return cursos;
         }
+
+        [WebMethod, ScriptMethod(ResponseFormat = ResponseFormat.Json, UseHttpGet = false)]
+        public static List<Curso> GuardarCurso(string materia,string aula,string inst)
+        {
+            List<Curso> cursos = new List<Curso>();
+            try
+            {
+                CursoDAO cursoDAO = new CursoDAO();
+                string resultado = cursoDAO.NuevoCurso(materia, aula, inst);
+                if (resultado.Equals("OK"))
+                {
+                    cursos = cursoDAO.ObtenerCursos();
+                }
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return cursos;
+        }
+
+        [WebMethod, ScriptMethod(ResponseFormat = ResponseFormat.Json, UseHttpGet = false)]
+        public static List<Curso> EliminarCurso(int id_curso)
+        {
+            List<Curso> cursos = new List<Curso>();
+            try
+            {
+                CursoDAO cursoDAO = new CursoDAO();
+                int resp = cursoDAO.EliminarCurso(id_curso);
+                if (resp > 0)
+                {
+                    cursos = cursoDAO.ObtenerCursos();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return cursos;
+        }
     }
 }

@@ -47,5 +47,54 @@ namespace DAO
                 conn.Close();
             }
         }
+        public int EliminarCurso(int id_curso_var)
+        {
+            try
+            {
+                ABMEntities db = new ABMEntities();
+                int res = 0;
+                /*
+                 * select * from cursos where id_curso =  id_curso_var;
+                 */
+                cursos c = db.cursos.FirstOrDefault(e => e.id_curso == id_curso_var);
+                db.cursos.Remove(c);
+
+                res = db.SaveChanges();
+
+                return res;
+            }catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public string NuevoCurso(string materia,string aula,string instructor)
+        {
+            try
+            {
+                int m = Convert.ToInt32(materia);
+                int a = Convert.ToInt32(aula);
+                int i = Convert.ToInt32(instructor);
+                string query = "insert into cursos (id_materia,codigo_aula,id_instructor,habilitado) values(@Materia, @Aula,@Ins, 1)";
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@Materia",m);
+                cmd.Parameters.AddWithValue("@Aula", a);
+                cmd.Parameters.AddWithValue("@Ins", i);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                return "OK";
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
     }
 }
